@@ -18,7 +18,7 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-dependencies = ["cbor2>=5.4.0", "cbor-diag>=1.1.0,<1.2", "pycose>=1.0.1"]
+dependencies = ["cbor2>=5.4.0", "cbor-diag>=1.1.0", "pycose>=1.0.1"]
 
 [project.urls]
 Homepage = "https://github.com/IdentityPython/pyMDL-MDOC"
