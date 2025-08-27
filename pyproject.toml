@@ -1,0 +1,48 @@
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project]
+name = "pymdoccbor"
+version = "1.0.1"
+description = "Python parser and writer for Mobile Driving License and EUDI Wallet MDOC CBOR."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Giuseppe De Marco", email = "demarcog83@gmail.com" }]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = ["cbor2>=5.4.0", "cbor-diag>=1.1.0,<1.2", "pycose>=1.0.1"]
+
+[project.urls]
+Homepage = "https://github.com/IdentityPython/pyMDL-MDOC"
+Repository = "https://github.com/peppelinux/pyMDOC-CBOR"
+
+[tool.pdm]
+# You can add project-specific configs here later if needed.
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "pdbpp",
+    "flake8",
+    "isort",
+    "autoflake",
+    "bandit",
+    "autopep8",
+    # test helpers sometimes used in examples/tests
+    "cryptography",
+    "asn1crypto",
+]
+
+[tool.pdm.build]
+# By default PDM includes your packages. You can explicitly control files here if you want:
+includes = ["pymdoccbor", "README.md", "LICENSE"]
+excludes = ["docs/**", "examples/**", "*/tests/**"]
